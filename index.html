@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una pregunta especial 💖</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff5f9e, #ff9ecf);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 90%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: #ff2f7a;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .yes {
+            background-color: #ff2f7a;
+            color: white;
+        }
+
+        .no {
+            background-color: #ccc;
+            color: #333;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Corazones */
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 20px;
+            animation: float 6s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Corazones flotando -->
+    <div class="heart" style="left:10%; animation-delay:0s;">💖</div>
+    <div class="heart" style="left:30%; animation-delay:1s;">💘</div>
+    <div class="heart" style="left:50%; animation-delay:2s;">💗</div>
+    <div class="heart" style="left:70%; animation-delay:3s;">💞</div>
+    <div class="heart" style="left:90%; animation-delay:4s;">❤️</div>
+
+    <div class="container">
+        <h1>
+            💕 ¿Quieres tener una cita con Leonardo <br>
+            el 6 de febrero de 2026 <br>
+            a las 20:00 pm? 💕
+        </h1>
+
+        <div class="buttons">
+            <button class="yes" onclick="alert('💖 Sabía que dirías que sí 💖')">Sí</button>
+            <button class="no" onclick="window.location.href='no.html'">No</button>
+        </div>
+    </div>
+
+</body>
+</html>
